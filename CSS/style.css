@@ -3,58 +3,112 @@ html{
 }
 *,*::before,*::after{
     box-sizing: inherit;
+    outline: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    border: none;
+    text-decoration: none;
 }
 body{
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #090908;
-}
-.container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    flex-basis: 100%;
-    flex-flow: row wrap;
-    position: relative;
-}
-header{
-    margin: 0;
-    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #FFF;
+    background: #080710;
 }
 .box{
-    flex-basis: 48%;
-    /* width: 100%; */
+    width: 430px;
+    height: 520px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.box .shape{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: absolute;
+}
+.shape:first-child{
+    background: linear-gradient(to right, #1845AD, #23A2F6);
+    top: -50px;
+    left: -50px;
+}
+.shape:last-child{
+    background: linear-gradient(to right, #FF512F, #F09819);
+    bottom: -50px;
+    right: -30px;
+}
+form{
+    width: 350px;
     height: 500px;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    padding: 50px 30px;
+    background: rgba(255, 255, 255, 0.13);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     border-top-right-radius: 20px;
     border-bottom-left-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 0 40px rgba(255, 255, 255, 0);
-    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+    padding: 50px 35px;
+    backdrop-filter: blur(10px);
 }
-.container::before{
-    content: "";
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background: linear-gradient(10deg, #0000FF, #0000CD);
-    position: absolute;
-    top: 10px;
-    left: 400px;
-    z-index: -1;
+form h2{
+    text-align: center;
+    font-size: 2em;
 }
-.container::after{
-    content: "";
+form p{
+    margin: 10px;
+    text-align: center;
+}
+.formGroup{
+    margin-top: 50px;
+}
+form input{
+    display: block;
+    height: 50px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 5px;
+    padding: 0 10px;
+    margin-top: 30px;
+    font-size: 14px;
+    font-weight: 300;
+}
+::placeholder{
+    color: #E5E5E5;
+}
+button{
+    margin-top: 30px;
+    width: 100%;
+    background: #00FFFF;
+    color: #080710;
+    padding: 15px 0;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 18px;
+    cursor: pointer;
+}
+button:hover{
+    background: #E5E5E5;
+}
+.social{
+    margin-top: 20px;
+    display: flex;
+    /* text-decoration: none; */
+}
+.social div{
+    background: rgba(255, 255, 255, 0.27);
     width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background: linear-gradient(10deg, #FF4500, #FF8C00);
-    position: absolute;
-    bottom: 10px;
-    right: 400px;
-    z-index: -1;
+    border-radius: 2px;
+    padding: 5px 10px 10px 5px;
+    text-align: center;
+    color: #EAF0FB;
+}
+.social:hover{
+    background: rgba(255, 255, 255, 0.47);
+}
+.social .facebook{
+    margin-left: 25px;
 }
